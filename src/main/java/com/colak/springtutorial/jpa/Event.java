@@ -24,7 +24,9 @@ public class Event {
 
     private String name;
 
+    // Stored as UTC without time zone information
     @Column(name = "created_at_utc", columnDefinition = "TIMESTAMP")
     private LocalDateTime createdAt;
+
 }
 

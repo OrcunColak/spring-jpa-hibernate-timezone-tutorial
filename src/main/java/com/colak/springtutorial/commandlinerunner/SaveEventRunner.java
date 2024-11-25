@@ -23,11 +23,11 @@ public class SaveEventRunner implements CommandLineRunner {
         // 25th November 2024, 10:00 AM, Europe/Istanbul time zone
         // This is saved as "2024-11-25 07:00:00"
 
-        // If spring.jpa.properties.hibernate.jdbc.time_zone=UTC is not set, the ZonedDateTime is
+        // If spring.jpa.properties.hibernate.jdbc.time_zone=UTC is not set, the LocalDateTime is
         // saved as 2024-11-25 10:00:00
         LocalDateTime createdAt = LocalDateTime.of(2024, 11, 25, 10, 0);
-
         event.setCreatedAt(createdAt);
+
         repository.saveAndFlush(event);
 
     }
